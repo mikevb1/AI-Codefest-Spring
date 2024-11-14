@@ -37,7 +37,7 @@ public class OrderController {
     
     @PutMapping("/{id}")
     public ResponseEntity<Order> updateOrder(@PathVariable Long id, @RequestBody Order order) {
-        if (!orderService.getOrderById(id).isPresent()) {
+        if (orderService.getOrderById(id).isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         order.setId(id);
@@ -46,7 +46,7 @@ public class OrderController {
     
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
-        if (!orderService.getOrderById(id).isPresent()) {
+        if (orderService.getOrderById(id).isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         orderService.deleteOrder(id);

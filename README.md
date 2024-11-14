@@ -2,7 +2,7 @@
 
 ## 1. Download [Cursor](https://www.cursor.com)
 
-## 2. Create a account after installing cursor
+## 2. Create an account after installing cursor
 
 ## 3. Clone this repository in Cursor
 
