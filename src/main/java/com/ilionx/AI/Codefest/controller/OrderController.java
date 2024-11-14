@@ -60,6 +60,7 @@ public class OrderController {
         Order[] orders = new Order[3];
         OrderItem[] items = new OrderItem[3];
         String[] names = {"John Doe", "Jane Smith", "Bob Johnson"};
+        String[] emails = {"john.smith@gmail.com", "jane.smith@gmail.com", "bob.smith@gmail.com"};
         String[] products = {"Laptop", "Smartphone", "Headphones"};
         Double[] prices = {999.99, 599.99, 149.99};
         String[] statuses = {"PENDING", "COMPLETED", "SHIPPED"};
@@ -69,6 +70,7 @@ public class OrderController {
             items[i] = new OrderItem();
             
             orders[i].setCustomerName(names[i]);
+            orders[i].setCustomerEmail(emails[i]);
             items[i].setQuantity(10);
             items[i].setPrice(prices[i]);
             items[i].setProductName(products[i]);

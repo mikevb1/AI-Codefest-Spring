@@ -20,6 +20,7 @@ public class Order {
     private Long id;
     
     private String customerName;
+    private String customerEmail;
     private LocalDateTime orderDate;
     private String status;
     private Double totalAmount;
