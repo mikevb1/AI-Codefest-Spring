@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15  # Specify the PostgreSQL version
+    container_name: postgres-db-codefest
+    environment:
+      POSTGRES_DB: aicodefest        # Name of your database
+      POSTGRES_USER: admin      # Database user
+      POSTGRES_PASSWORD: admin # Database password
+    ports:
+      - "5432:5432"              # Expose PostgreSQL on port 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist data
+
+volumes:
+  postgres_data:
